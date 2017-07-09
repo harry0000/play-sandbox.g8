@@ -1,0 +1,25 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(content: Html)(implicit messages: Messages)
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="$user$">
+    <meta name="description" content="@Messages("html.description")">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+    <link rel="apple-touch-icon" href="@routes.Assets.versioned("images/icon.png")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <title>@Messages("html.title")</title>
+  </head>
+  <body>
+    @* And here's where we render the `Html` object containing
+     * the page content. *@
+    @content
+  </body>
+</html>
