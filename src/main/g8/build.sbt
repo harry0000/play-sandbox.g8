@@ -18,7 +18,7 @@ lazy val root = project.in(file("."))
     name := "$name$",
     description := "Play framework sandbox.",
     libraryDependencies ++= Seq(
-      "org.scalatestplus.play" %% "scalatestplus-play" % "$scalatest-play_version$" % "test",
+      "org.scalatestplus.play" %% "scalatestplus-play" % "$scalatest_play_version$" % "test",
       "org.scalatest"          %% "scalatest"          % "3.0.3" % "test"
     )
   )
